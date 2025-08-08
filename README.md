@@ -9,7 +9,7 @@ import (
   "database/sql"
   "fmt"
 
-  "github.com/jamf/go-mysqldump"
+  "github.com/revij/go-mysqldump"
   "github.com/go-sql-driver/mysql"
 )
 
@@ -39,7 +39,7 @@ func main() {
   }
 
   // Dump database to file
-  err := dumper.Dump()
+  err = dumper.Dump()
   if err != nil {
     fmt.Println("Error dumping:", err)
     return
@@ -51,5 +51,6 @@ func main() {
 }
 ```
 
-[![GoDoc](https://godoc.org/github.com/jamf/go-mysqldump?status.svg)](https://godoc.org/github.com/jamf/go-mysqldump)
-[![Build Status](https://travis-ci.org/jamf/go-mysqldump.svg?branch=master)](https://travis-ci.org/jamf/go-mysqldump)
+[![GoDoc](https://godoc.org/github.com/revij/go-mysqldump?status.svg)](https://godoc.org/github.com/revij/go-mysqldump)
+[![Go Report Card](https://goreportcard.com/badge/github.com/revij/go-mysqldump)](https://goreportcard.com/report/github.com/revij/go-mysqldump)
+[![Build Status](https://github.com/revij/go-mysqldump/workflows/CI/badge.svg)](https://github.com/revij/go-mysqldump/actions)
