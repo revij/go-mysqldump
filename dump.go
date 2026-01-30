@@ -409,6 +409,8 @@ func reflectColumnType(tp *sql.ColumnType) reflect.Type {
 		return reflect.TypeOf(sql.NullInt64{})
 	case "DOUBLE":
 		return reflect.TypeOf(sql.NullFloat64{})
+	case "DATE", "DATETIME", "TIMESTAMP", "TIME":
+		return reflect.TypeOf(sql.NullString{})
 	}
 
 	// unknown datatype
